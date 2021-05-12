@@ -5,17 +5,17 @@ Developod an Android application that allows you to search for information regar
 ### Tech Stack:
 #### Server-Side:  
 JavaScript  
-NodeJS
-ExpressJS
+NodeJS  
+ExpressJS  
 Fetch API  
 CORS Module  
 GAE - Google App Engine
   
 #### Client-Side:  
-XML
-Java
-Volley HTTP
-Glide
+XML  
+Java  
+Volley HTTP  
+Glide  
 SharedPreferences API 
   
 ### App Demo:
