@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/blue"/>
+    <TextView
+        android:id="@+id/progressBar1_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loading..."
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/progressBar1"/>
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/slider_movie"
+                android:layout_width="match_parent"
+                android:layout_height="405dp"
+                android:layout_centerHorizontal="true"
+                app:sliderAnimationDuration="600"
+                app:sliderAutoCycleDirection="back_and_forth"
+                app:sliderIndicatorAnimationDuration="600"
+                app:sliderIndicatorEnabled="true"
+                app:sliderIndicatorGravity="center_horizontal|bottom"
+                app:sliderIndicatorMargin="15dp"
+                app:sliderIndicatorMarginBottom="0dp"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorPadding="3dp"
+                app:sliderIndicatorRadius="1dp"
+                app:sliderIndicatorSelectedColor="#5A5A5A"
+                app:sliderIndicatorUnselectedColor="#FFF"
+                app:sliderScrollTimeInSec="1"
+                android:layout_marginTop="10dp"/>
+
+            <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/slider_tv"
+                android:layout_width="match_parent"
+                android:layout_height="405dp"
+                android:layout_centerHorizontal="true"
+                app:sliderAnimationDuration="600"
+                app:sliderAutoCycleDirection="back_and_forth"
+                app:sliderIndicatorAnimationDuration="600"
+                app:sliderIndicatorEnabled="true"
+                app:sliderIndicatorGravity="center_horizontal|bottom"
+                app:sliderIndicatorMargin="15dp"
+                app:sliderIndicatorMarginBottom="0dp"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorPadding="3dp"
+                app:sliderIndicatorRadius="1dp"
+                app:sliderIndicatorSelectedColor="#5A5A5A"
+                app:sliderIndicatorUnselectedColor="#FFF"
+                app:sliderScrollTimeInSec="1"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/txt_top_rated_movie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Top-Rated"
+                android:layout_below="@id/slider_movie"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:textSize="30dp"/>
+
+            <TextView
+                android:id="@+id/txt_top_rated_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Top-Rated"
+                android:layout_below="@id/slider_tv"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:textSize="30dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_top_rated_movie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_top_rated_movie"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_top_rated_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_top_rated_TV"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/txt_popular_movie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Popular"
+                android:layout_below="@id/recycler_top_rated_movie"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="30dp"/>
+
+            <TextView
+                android:id="@+id/txt_popular_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Popular"
+                android:layout_below="@id/recycler_top_rated_tv"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:textSize="30dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_popular_movie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_popular_movie"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_popular_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_popular_tv"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/footer_tmdb_movie"
+                android:layout_below="@+id/recycler_popular_movie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Powered by TMDB"
+                android:textColor="@color/blue"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/footer_tmdb_tv"
+                android:layout_below="@+id/recycler_popular_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Powered by TMDB"
+                android:textColor="@color/blue"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/footer_dev_movie"
+                android:layout_below="@+id/footer_tmdb_movie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Developed by Soham"
+                android:textColor="@color/blue"/>
+
+            <TextView
+                android:id="@+id/footer_dev_tv"
+                android:layout_below="@+id/footer_tmdb_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Developed by Soham"
+                android:textColor="@color/blue"/>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
